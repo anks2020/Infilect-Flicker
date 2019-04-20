@@ -1,0 +1,27 @@
+.Icons{
+    color:steelblue;
+    margin-bottom:-5px;
+    margin-right:3px;
+}
+#BigFont{
+
+    font-size: 72px;
+    font-family: cursive;
+}
+.searchbox{
+    margin: 0 auto; 
+    width: 450px; 
+}
+.List{
+    width: 100%;
+    /* border: 1px solid black; */
+    /* display: table;
+    table-layout: fixed; */
+    min-height: 100vh;
+    display: grid;
+  grid-gap: 16px 16px;
+  grid-template-columns: auto auto auto;
+  margin-right:30px;
+
+    
+}
