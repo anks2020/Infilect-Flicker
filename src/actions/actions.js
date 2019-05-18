@@ -1,6 +1,5 @@
 import{
     GET_GROUPS,
-    GET_GROUP_PHOTOS,
     GET_PHOTO_DETAILS
 } from './types';
 import axios from 'axios';
@@ -28,16 +27,7 @@ export const getGroupList =(grouplist)=>{
                     console.log(error);
                 });
             }
-    };
-    
-    export const getPhotoList =(photolist)=>{
-        return{
-            type:GET_GROUP_PHOTOS,
-            photos:photolist
-            
-        }   
-        };
-            
+    };    
         export const getPhotos = (groupid) => {
          return dispatch =>{
             axios.get('https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key='+'7185bb7deee381b88b350badda2c50cd'+'&group_id='+groupid+'&format=json',        
@@ -48,7 +38,6 @@ export const getGroupList =(grouplist)=>{
                        resdata.photos.photo.map((p)=>{
                        dispatch(getPhoto(p.id));
                         });
-                        dispatch(getPhotoList(resdata.photos.photo));
                     }).catch(error =>{
                         console.log(error);
                     });
