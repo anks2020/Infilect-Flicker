@@ -25,8 +25,8 @@ class Groups extends Component{
         this.props.searchGroup(e);
         document.getElementById("Bigdiv").style.margin=0;
     }
-    getGroupDetails = (id) =>{
-        this.props.history.push({pathname: '/gallery/',state:{group_id:id}});
+    getGroupDetails = (id,name) =>{
+        this.props.history.push({pathname: '/gallery/',state:{group_id:id,group_name:name}});
       }
   
     render()
@@ -54,7 +54,7 @@ class Groups extends Component{
                     discussions={group.topic_count} 
                     members={group.members} 
                     id={group.nsid}
-                    onGroupClicked={()=>this.getGroupDetails(group.nsid)}
+                    onGroupClicked={()=>this.getGroupDetails(group.nsid,group.name)}
                      />
                     </div>)
                     return data;
@@ -76,11 +76,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         searchGroup : (group) => dispatch(actions.getGroups(group)), 
-        // getGroupDetails : (group) => dispatch(actions.getGroupDetails(group)),
-        // deleteUser : (username) => dispatch(actions.deleteUser(username)), 
-        // editUser : (usernames) => dispatch(actions.editUser(usernames)),
        
     };
 }
 export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Groups));
-// export default Groups;
