@@ -15,6 +15,7 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
+    fontWeight:"bold"
   },
   menuButton: {
     marginLeft: -12,
@@ -28,8 +29,8 @@ const ButtonAppBar=withRouter((props) =>{
     <div className={classes.root}>
       <AppBar position="static" style={{backgroundColor:"black"}}>
         <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            Infilect
+          <Typography variant="h6" color="inherit"  className={classes.grow}>
+            INFILECT
           </Typography>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={()=>props.history.push('/groups')}>
             <SearchIcon />
