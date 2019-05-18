@@ -10,6 +10,7 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
+    fontWeight:"bold"
   },
   menuButton: {
     marginLeft: -12,
