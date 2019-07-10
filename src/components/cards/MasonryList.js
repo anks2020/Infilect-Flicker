@@ -2,28 +2,20 @@ import '../../assets/css/custom.css';
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-// import IconButton from '@material-ui/core/IconButton';
-// import InfoIcon from '@material-ui/icons/Info';
-// import Modal from '../Modal/Modal';
+
 const masonryOptions = {
     transitionDuration: 0,
     column:3,
     padding:4
 };
-const style={    margin:16};
 class Gallery extends React.Component {
     constructor(props){
         super(props);
         this.state={
             showdesc:true       }
-        // this.handleLayoutComplete= this.handleLayoutComplete.bind(this);
         this.changeDateFormat= this.changeDateFormat.bind(this);
         this.infoClicked= this.infoClicked.bind(this);
     }
-    // handleLayoutComplete = (imagesLoadedInstance)=> {
-        // this.show();
-        // console.log(imagesLoadedInstance);
-    // }
     infoClicked = ()=>{
         this.setState({showdesc:!this.state.showdesc})
     }
@@ -79,12 +71,9 @@ class Gallery extends React.Component {
         return (month+" "+day+" "+year)
     }
     render() {
-        // var show=this.state.showdesc;
-        // this.changeDateFormat(1313324536);
         return (
             <Masonry
                 className={'my-masonry-grid'}
-                style={style}
                 elementType={'ul'} // default 'div'
                 options={masonryOptions} // default {}
                 disableImagesLoaded={false} // default false
