@@ -11,6 +11,7 @@
 .searchbox{
     margin: 0 auto; 
     width: 450px; 
+    border: 2px solid darkgray;
 }
 .List{
     width: 100%;
@@ -30,6 +31,7 @@
     display: -ms-flexbox; /* Not needed if autoprefixing */
     display: flex;
     margin-left: -30px; /* gutter size offset */
+    margin: 16px 104px;
     width: auto;
   }
   .image-element-class {
