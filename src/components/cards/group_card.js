@@ -17,6 +17,7 @@ const styles = theme => ({
     maxWidth: 400,
     padding:5,
     margin:20,
+    border: "2px solid lightgray"
   },
   avatar: {
     backgroundColor: red[500],
